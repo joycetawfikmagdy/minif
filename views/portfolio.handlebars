@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+{{/each}}
+{{/if}}
+<html>
+<head>
+<title>File Upload Box</title>
+</head>
+<body>
+	<form  enctype="multipart/form-data" method="post" action="/users/portfolio">
+
+name:  <input type="text" name="name" />
+</br>
+<p>You Have to upload  one work to create your portfolio</p>
+</br>
+Links: <input type="text" name="link" />
+</br>
+<p>Screenshots</p>
+<input type="file" name="img"  />
+</br>
+<p>Repo</p>
+<input type="file" name="file" />
+</br>
+
+<input type="hidden" class="register-input" placeholder="Password" name="invisible1">
+<input type="submit" name="submit" value="Submit" />
+</form>
+</body>
+</html>
